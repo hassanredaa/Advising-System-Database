@@ -1,0 +1,115 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="Advising_System.Student" %>
+
+<!DOCTYPE html>
+<style>
+
+    body {
+  background-color: #f5f5f5;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  font-size: 20px;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #ff5733; /* Vibrant orange */
+  font-size: 3em;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  animation: bounce 1s infinite alternate;
+}
+
+p {
+  color: #3498db; /* Bright blue */
+  font-size: 1.2em;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #3498db; /* Bright blue border */
+  border-radius: 5px;
+  width: 200px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #2980b9; /* Darker blue on focus */
+  outline: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e74c3c; /* Energetic red */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+</style>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+            <br />
+            <br />
+            <asp:Button ID="GradPlan" runat="server" Text="View Graduation Plan" OnClick="GradPlan_Click" CssClass="button" Width="650px" />
+        &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button1" runat="server" OnClick="viewinstall" Text="View Installment" CssClass="button" Width="650px"/>
+        &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="View All Courses" CssClass="button" Width="650px"/>
+        &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button3" runat="server" Text="Register For First Makeup" OnClick="Button3_Click" CssClass="button" Width="650px"/>
+        &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button4" runat="server" Text="Register For Second Makeup" OnClick="Button4_Click" CssClass="button" Width="650px"/>
+        &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button5"  runat="server" Text="View All Courses with Instructors & Slots" OnClick="Button5_Click" CssClass="button" Width="650px" />
+        &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="View slots of specfic course" CssClass="button" Width="650px" />
+        &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button7" runat="server" Text="Choose Instructor" OnClick="Button7_Click" CssClass="button" Width="650px" />
+        &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button8" runat="server" Text="View all Courses with Prerequisites" OnClick="Button8_Click" CssClass="button" Width="650px"/>
+            <br />
+            <asp:Button ID="Button9" runat="server" Text="Log Out" CssClass="button" Width="650px
+                " OnClick="Button9_Click" />
+        </div>
+    </form>
+</body>
+</html>
